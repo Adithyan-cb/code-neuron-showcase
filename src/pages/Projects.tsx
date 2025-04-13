@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Github, ExternalLink, Search, Brain, Database, ChartBar } from "lucide-react";
+import { Github, ExternalLink, Search, Bot,FileText,Code,BookOpenText } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
 // Project type definition
@@ -26,65 +26,46 @@ type ProjectType = {
 const projects: ProjectType[] = [
   {
     id: 1,
-    title: "Neural Network Visualizer",
-    description: "An interactive tool to visualize the inner workings of neural networks, helping students understand how deep learning models function.",
-    image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=2000",
-    tags: ["Python", "PyTorch", "React", "D3.js"],
-    githubUrl: "https://github.com/yourusername/neural-visualizer",
-    demoUrl: "https://demo-url.com",
-    category: "Deep Learning",
-    icon: <Brain className="h-6 w-6 text-ai-purple" />,
+    title: "Alice",
+    description: "Alice 👾– A chill, relatable chatbot with a playful vibe. Built with Streamlit (frontend) and Meta Llama 3 (through Groq) for fast, engaging conversations. Alice’s witty, supportive personality makes every chat feel like hanging out with your bestie. 😎",
+    image: "https://i.pinimg.com/736x/89/f0/c4/89f0c4c973d860e562a7d57ff255ef84.jpg",
+    tags: ["Python", "Streamlit","Groq","Langchain"],
+    githubUrl: "https://github.com/Adithyan-cb/Alice",
+    demoUrl: "https://chat-with-alice.streamlit.app/",
+    category: "Streamlit & Groq",
+    icon: <Bot className="h-6 w-6 text-ai-purple" />,
   },
   {
     id: 2,
-    title: "Transformer-based Text Summarizer",
-    description: "A natural language processing application that uses transformers to generate concise summaries of long-form content.",
-    image: "https://images.unsplash.com/photo-1546514714-df0ccc50d7bf?q=80&w=2000",
-    tags: ["Python", "Hugging Face", "NLP", "Streamlit"],
-    githubUrl: "https://github.com/yourusername/text-summarizer",
-    category: "NLP",
-    icon: <Database className="h-6 w-6 text-ai-purple" />,
+    title: "SummizeAI",
+    description: "Summize is an AI-powered text and PDF summarization tool designed to quickly distill large documents into concise, insightful summaries. Leveraging state-of-the-art natural language processing models, Summize supports various file formats and delivers accurate summaries with minimal user input.",
+    image: "https://images.unsplash.com/photo-1528459199957-0ff28496a7f6?q=80&w=443&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags: ["Python", "Groq", "Streamlit"],
+    githubUrl: "https://github.com/Adithyan-cb/summizeAI",
+    demoUrl:"https://summize.streamlit.app/",
+    category: "Streamlit & Groq",
+    icon: <FileText className="h-6 w-6 text-ai-purple" />,
   },
   {
     id: 3,
-    title: "Computer Vision for Medical Imaging",
-    description: "A deep learning model trained to detect abnormalities in medical scans, assisting healthcare professionals in diagnosis.",
-    image: "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=2000",
-    tags: ["Python", "TensorFlow", "OpenCV", "Medical AI"],
-    githubUrl: "https://github.com/yourusername/medical-vision",
-    category: "Computer Vision",
-    icon: <ChartBar className="h-6 w-6 text-ai-purple" />,
+    title: "Code Critic",
+    description: "Code Critic is an innovative web application that assists developers in refining and optimizing their source code. Built with Python, Streamlit, and integrated with Groq powered by the Llama3 model, Code Critic provides a seamless experience where you can simply upload your code, and our tool reviews it to suggest improvements and highlight potential bug fixes.",
+    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags: ["Python","Streamlit","Groq"],
+    githubUrl: "https://github.com/Adithyan-cb/codeCritic",
+    demoUrl: "https://code-critic-ai.streamlit.app/",
+    category: "Streamlit & Groq",
+    icon: <Code className="h-6 w-6 text-ai-purple" />,
   },
   {
     id: 4,
-    title: "Reinforcement Learning for Game AI",
-    description: "Using reinforcement learning algorithms to train AI agents to play classic arcade games with human-level performance.",
-    image: "https://images.unsplash.com/photo-1551103782-8ab07afd45c1?q=80&w=2000",
-    tags: ["Python", "OpenAI Gym", "PyTorch", "RL"],
-    githubUrl: "https://github.com/yourusername/rl-game-ai",
-    category: "Reinforcement Learning",
-    icon: <Brain className="h-6 w-6 text-ai-purple" />,
-  },
-  {
-    id: 5,
-    title: "Machine Learning Classification Toolkit",
-    description: "A toolkit that implements various classification algorithms and provides visualization tools for understanding model performance.",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2000",
-    tags: ["Python", "Scikit-learn", "Matplotlib", "Jupyter"],
-    githubUrl: "https://github.com/yourusername/ml-classification",
-    demoUrl: "https://demo-url.com",
-    category: "Machine Learning",
-    icon: <Database className="h-6 w-6 text-ai-purple" />,
-  },
-  {
-    id: 6,
-    title: "Sentiment Analysis Dashboard",
-    description: "A web application for real-time sentiment analysis of social media posts and customer feedback.",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2000",
-    tags: ["Python", "NLTK", "React", "D3.js", "NLP"],
-    githubUrl: "https://github.com/yourusername/sentiment-dashboard",
-    category: "NLP",
-    icon: <ChartBar className="h-6 w-6 text-ai-purple" />,
+    title: "Neural Nectar",
+    description: "NeuralNectar is a curated collection of AI, ML, and DL resources, designed to fuel your learning journey from beginner to expert with essential concepts, projects, and hands-on examples.",
+    image: "https://images.unsplash.com/photo-1550399105-c4db5fb85c18?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags: ["Markdown"],
+    githubUrl: "https://github.com/Adithyan-cb/NeuralNectar",
+    category: "Learning Resources",
+    icon: <BookOpenText className="h-6 w-6 text-ai-purple" />,
   },
 ];
 
@@ -92,7 +73,7 @@ const Projects = () => {
   const [filter, setFilter] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState("");
   
-  const categories = ["All", "Machine Learning", "Deep Learning", "NLP", "Computer Vision", "Reinforcement Learning"];
+  const categories = ["Streamlit & Groq","Learning Resources","All"];
   
   const filteredProjects = projects.filter(project => {
     const matchesCategory = filter === "All" || project.category === filter;
@@ -109,7 +90,7 @@ const Projects = () => {
       <main className="flex-grow">
         <section className="py-16 container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">ML Projects</h1>
+            <h1 className="text-4xl font-bold mb-4">Projects</h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Explore my machine learning and artificial intelligence projects
             </p>
@@ -191,11 +172,7 @@ const Projects = () => {
                         </a>
                       )}
                     </div>
-                    <Link to={`/projects/${project.id}`}>
-                      <Button variant="ghost" className="text-ai-purple hover:text-ai-purple/90">
-                        View Details
-                      </Button>
-                    </Link>
+                   
                   </CardFooter>
                 </Card>
               ))}

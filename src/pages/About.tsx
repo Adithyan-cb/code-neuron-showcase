@@ -24,7 +24,7 @@ const About = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h1 className="text-3xl font-bold mb-2">Adithyan</h1>
+                  <h1 className="text-3xl font-bold mb-2">Adithyan CB</h1>
                   <p className="text-ai-purple font-medium mb-4">Student & Self-taught ML Enthusiast</p>
                   <p className="text-muted-foreground mb-6">
                     Exploring the fascinating world of machine learning and artificial intelligence through self-study and personal projects.

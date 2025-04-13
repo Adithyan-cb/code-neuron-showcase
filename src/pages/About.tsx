@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -80,8 +81,6 @@ const About = () => {
                         <h3 className="text-lg font-medium mb-2">Programming Languages</h3>
                         <div className="flex flex-wrap gap-2">
                           <Badge>Python</Badge>
-                          <Badge>JavaScript</Badge>
-                          <Badge>SQL</Badge>
                           <Badge>C++</Badge>
                         </div>
                       </div>
@@ -90,19 +89,14 @@ const About = () => {
                         <h3 className="text-lg font-medium mb-2">AI/ML Frameworks</h3>
                         <div className="flex flex-wrap gap-2">
                           <Badge>PyTorch</Badge>
-                          <Badge>TensorFlow</Badge>
                           <Badge>Scikit-learn</Badge>
-                          <Badge>Hugging Face</Badge>
                           <Badge>LangChain</Badge>
-                          <Badge>OpenCV</Badge>
                         </div>
                       </div>
                       
                       <div>
                         <h3 className="text-lg font-medium mb-2">Web Development</h3>
                         <div className="flex flex-wrap gap-2">
-                          <Badge>React</Badge>
-                          <Badge>Flask</Badge>
                           <Badge>FastAPI</Badge>
                           <Badge>HTML/CSS</Badge>
                         </div>
@@ -112,10 +106,7 @@ const About = () => {
                         <h3 className="text-lg font-medium mb-2">Tools & Platforms</h3>
                         <div className="flex flex-wrap gap-2">
                           <Badge>Git</Badge>
-                          <Badge>Docker</Badge>
-                          <Badge>Jupyter</Badge>
                           <Badge>Google Colab</Badge>
-                          <Badge>Kaggle</Badge>
                         </div>
                       </div>
                     </div>

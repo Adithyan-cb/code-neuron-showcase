@@ -1,11 +1,10 @@
-
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import { Download, Mail, Github, Linkedin, FileText, GraduationCap, Briefcase } from "lucide-react";
+import { Mail, Github, Linkedin, GraduationCap, FileText } from "lucide-react";
 
 const About = () => {
   return (
@@ -24,10 +23,10 @@ const About = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h1 className="text-3xl font-bold mb-2">John Doe</h1>
-                  <p className="text-ai-purple font-medium mb-4">AI Engineer & ML Researcher</p>
+                  <h1 className="text-3xl font-bold mb-2">Adithyan</h1>
+                  <p className="text-ai-purple font-medium mb-4">Student & Self-taught ML Enthusiast</p>
                   <p className="text-muted-foreground mb-6">
-                    Building intelligent solutions to solve real-world problems through the power of machine learning and artificial intelligence.
+                    Exploring the fascinating world of machine learning and artificial intelligence through self-study and personal projects.
                   </p>
                   
                   <div className="flex justify-center lg:justify-start space-x-3 mb-6">
@@ -47,24 +46,15 @@ const About = () => {
                       </Button>
                     </a>
                   </div>
-                  
-                  <div className="flex justify-center lg:justify-start">
-                    <a href="/resume.pdf" download>
-                      <Button className="bg-ai-purple hover:bg-ai-purple/90 flex items-center">
-                        <Download className="mr-2 h-4 w-4" /> Download Resume
-                      </Button>
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
             
             <div className="lg:col-span-2">
               <Tabs defaultValue="about" className="w-full">
-                <TabsList className="grid grid-cols-3 mb-8">
+                <TabsList className="grid grid-cols-2 mb-8">
                   <TabsTrigger value="about">About</TabsTrigger>
                   <TabsTrigger value="education">Education</TabsTrigger>
-                  <TabsTrigger value="experience">Experience</TabsTrigger>
                 </TabsList>
                 
                 <TabsContent value="about" className="space-y-6">
@@ -72,13 +62,13 @@ const About = () => {
                     <h2 className="text-2xl font-bold mb-4">About Me</h2>
                     <div className="space-y-4 text-muted-foreground">
                       <p>
-                        I'm an AI Engineer and ML Researcher specializing in developing intelligent systems that solve real-world problems. My journey in artificial intelligence began during my undergraduate studies in Computer Science, where I was fascinated by the potential of machines to learn and adapt.
+                        I'm a college student passionate about machine learning and artificial intelligence. My journey into AI began during my undergraduate studies, where I became fascinated by the potential of algorithms to learn patterns and make decisions.
                       </p>
                       <p>
-                        Currently, I focus on natural language processing and computer vision applications, with a particular interest in making AI more accessible and ethically sound. I enjoy tackling complex problems and turning cutting-edge research into practical solutions.
+                        Currently, I'm self-studying various ML and AI concepts, focusing on natural language processing and computer vision applications. I enjoy implementing research papers and building projects that apply these techniques to solve interesting problems.
                       </p>
                       <p>
-                        When I'm not coding or training models, you can find me contributing to open-source projects, writing technical blog posts, or mentoring aspiring AI engineers. I'm passionate about knowledge sharing and believe in the collaborative nature of the AI community.
+                        When I'm not coding or training models, you can find me contributing to open-source projects, participating in ML competitions, or helping fellow students understand complex concepts. I'm always looking to connect with others who share my enthusiasm for AI and ML.
                       </p>
                     </div>
                   </div>
@@ -123,9 +113,9 @@ const About = () => {
                         <div className="flex flex-wrap gap-2">
                           <Badge>Git</Badge>
                           <Badge>Docker</Badge>
-                          <Badge>AWS</Badge>
-                          <Badge>Google Cloud</Badge>
                           <Badge>Jupyter</Badge>
+                          <Badge>Google Colab</Badge>
+                          <Badge>Kaggle</Badge>
                         </div>
                       </div>
                     </div>
@@ -141,41 +131,17 @@ const About = () => {
                           <GraduationCap className="h-6 w-6 mr-4 text-ai-purple flex-shrink-0 mt-1" />
                           <div>
                             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                              <h3 className="text-xl font-semibold">M.S. in Computer Science, AI Specialization</h3>
-                              <span className="text-muted-foreground">2020 - 2022</span>
-                            </div>
-                            <p className="text-muted-foreground mb-2">Stanford University</p>
-                            <div className="space-y-2">
-                              <p>Focused on advanced machine learning techniques, deep learning, and natural language processing.</p>
-                              <p>Thesis: "Improving Transformer Efficiency Through Dynamic Pruning Techniques"</p>
-                              <div className="flex flex-wrap gap-2 mt-3">
-                                <Badge variant="outline">Deep Learning</Badge>
-                                <Badge variant="outline">NLP</Badge>
-                                <Badge variant="outline">Computer Vision</Badge>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                    
-                    <Card>
-                      <CardContent className="p-6">
-                        <div className="flex items-start">
-                          <GraduationCap className="h-6 w-6 mr-4 text-ai-purple flex-shrink-0 mt-1" />
-                          <div>
-                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
                               <h3 className="text-xl font-semibold">B.S. in Computer Science</h3>
-                              <span className="text-muted-foreground">2016 - 2020</span>
+                              <span className="text-muted-foreground">2021 - Present</span>
                             </div>
-                            <p className="text-muted-foreground mb-2">Massachusetts Institute of Technology</p>
+                            <p className="text-muted-foreground mb-2">State University</p>
                             <div className="space-y-2">
-                              <p>Graduated with honors, minor in Mathematics.</p>
-                              <p>Senior project: "Reinforcement Learning Approaches to Gameplay Optimization"</p>
+                              <p>Focusing on machine learning and computational mathematics.</p>
+                              <p>Relevant coursework: Data Structures, Algorithms, Machine Learning Fundamentals, Linear Algebra, Statistics</p>
                               <div className="flex flex-wrap gap-2 mt-3">
                                 <Badge variant="outline">Machine Learning</Badge>
                                 <Badge variant="outline">Algorithms</Badge>
-                                <Badge variant="outline">Software Engineering</Badge>
+                                <Badge variant="outline">Data Science</Badge>
                               </div>
                             </div>
                           </div>
@@ -189,100 +155,20 @@ const About = () => {
                           <FileText className="h-6 w-6 mr-4 text-ai-purple flex-shrink-0 mt-1" />
                           <div>
                             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                              <h3 className="text-xl font-semibold">Certifications</h3>
+                              <h3 className="text-xl font-semibold">Online Courses & Certifications</h3>
                             </div>
                             <div className="space-y-3">
                               <div>
                                 <p className="font-medium">Deep Learning Specialization - Coursera</p>
-                                <p className="text-muted-foreground">2021</p>
+                                <p className="text-muted-foreground">2023</p>
                               </div>
                               <div>
-                                <p className="font-medium">AWS Machine Learning Specialty</p>
+                                <p className="font-medium">Machine Learning - Stanford Online</p>
                                 <p className="text-muted-foreground">2022</p>
                               </div>
                               <div>
-                                <p className="font-medium">TensorFlow Developer Certificate</p>
-                                <p className="text-muted-foreground">2021</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </TabsContent>
-                
-                <TabsContent value="experience">
-                  <h2 className="text-2xl font-bold mb-6">Work Experience</h2>
-                  <div className="space-y-6">
-                    <Card>
-                      <CardContent className="p-6">
-                        <div className="flex items-start">
-                          <Briefcase className="h-6 w-6 mr-4 text-ai-purple flex-shrink-0 mt-1" />
-                          <div>
-                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                              <h3 className="text-xl font-semibold">AI Research Engineer</h3>
-                              <span className="text-muted-foreground">2022 - Present</span>
-                            </div>
-                            <p className="text-muted-foreground mb-4">Google AI Research</p>
-                            <div className="space-y-2">
-                              <p>Working on developing more efficient and interpretable deep learning models for NLP tasks.</p>
-                              <p>Contributing to open-source projects to enhance LLM capabilities.</p>
-                              <p>Authored research papers on model optimization and efficiency techniques.</p>
-                              <div className="flex flex-wrap gap-2 mt-3">
-                                <Badge variant="outline">PyTorch</Badge>
-                                <Badge variant="outline">Transformers</Badge>
-                                <Badge variant="outline">Research</Badge>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                    
-                    <Card>
-                      <CardContent className="p-6">
-                        <div className="flex items-start">
-                          <Briefcase className="h-6 w-6 mr-4 text-ai-purple flex-shrink-0 mt-1" />
-                          <div>
-                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                              <h3 className="text-xl font-semibold">Machine Learning Engineer</h3>
-                              <span className="text-muted-foreground">2020 - 2022</span>
-                            </div>
-                            <p className="text-muted-foreground mb-4">Tesla Autopilot</p>
-                            <div className="space-y-2">
-                              <p>Developed computer vision algorithms for autonomous driving systems.</p>
-                              <p>Improved object detection accuracy by 12% through model architecture innovations.</p>
-                              <p>Optimized inference performance for real-time processing on vehicle hardware.</p>
-                              <div className="flex flex-wrap gap-2 mt-3">
-                                <Badge variant="outline">TensorFlow</Badge>
-                                <Badge variant="outline">Computer Vision</Badge>
-                                <Badge variant="outline">CUDA</Badge>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                    
-                    <Card>
-                      <CardContent className="p-6">
-                        <div className="flex items-start">
-                          <Briefcase className="h-6 w-6 mr-4 text-ai-purple flex-shrink-0 mt-1" />
-                          <div>
-                            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                              <h3 className="text-xl font-semibold">Data Science Intern</h3>
-                              <span className="text-muted-foreground">Summer 2019</span>
-                            </div>
-                            <p className="text-muted-foreground mb-4">Amazon</p>
-                            <div className="space-y-2">
-                              <p>Built recommendation algorithms for product search ranking.</p>
-                              <p>Implemented A/B testing frameworks to evaluate algorithm performance.</p>
-                              <p>Analyzed user behavior data to identify opportunities for search improvement.</p>
-                              <div className="flex flex-wrap gap-2 mt-3">
-                                <Badge variant="outline">Python</Badge>
-                                <Badge variant="outline">Recommendation Systems</Badge>
-                                <Badge variant="outline">SQL</Badge>
+                                <p className="font-medium">PyTorch for Deep Learning - Fast.ai</p>
+                                <p className="text-muted-foreground">2023</p>
                               </div>
                             </div>
                           </div>

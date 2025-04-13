@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Github, ExternalLink } from "lucide-react";
+import { ArrowRight, Github, ExternalLink, Brain, Database, ChartBar } from "lucide-react";
 
 // Project type definition
 type ProjectType = {
@@ -16,13 +16,13 @@ type ProjectType = {
   githubUrl?: string;
   demoUrl?: string;
   category: string;
+  icon?: React.ReactNode;
 };
 
 // Sample projects data
 const projects: ProjectType[] = [
   {
-    id:
- 1,
+    id: 1,
     title: "Neural Network Visualizer",
     description: "An interactive tool to visualize the inner workings of neural networks, helping students understand how deep learning models function.",
     image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=2000",
@@ -30,6 +30,7 @@ const projects: ProjectType[] = [
     githubUrl: "https://github.com/yourusername/neural-visualizer",
     demoUrl: "https://demo-url.com",
     category: "Deep Learning",
+    icon: <Brain className="h-6 w-6 text-ai-purple" />,
   },
   {
     id: 2,
@@ -39,22 +40,24 @@ const projects: ProjectType[] = [
     tags: ["Python", "Hugging Face", "NLP", "Streamlit"],
     githubUrl: "https://github.com/yourusername/text-summarizer",
     category: "NLP",
+    icon: <Database className="h-6 w-6 text-ai-purple" />,
   },
   {
     id: 3,
-    title: "Computer Vision for Medical Imaging",
-    description: "A deep learning model trained to detect abnormalities in medical scans, assisting healthcare professionals in diagnosis.",
-    image: "https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=2000",
-    tags: ["Python", "TensorFlow", "OpenCV", "Medical AI"],
-    githubUrl: "https://github.com/yourusername/medical-vision",
-    category: "Computer Vision",
+    title: "Machine Learning Classification Toolkit",
+    description: "A toolkit that implements various classification algorithms and provides visualization tools for understanding model performance.",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2000",
+    tags: ["Python", "Scikit-learn", "Matplotlib", "Jupyter"],
+    githubUrl: "https://github.com/yourusername/ml-classification",
+    category: "Machine Learning",
+    icon: <ChartBar className="h-6 w-6 text-ai-purple" />,
   },
 ];
 
 const ProjectsShowcase = () => {
   const [filter, setFilter] = useState<string>("All");
   
-  const categories = ["All", "Deep Learning", "NLP", "Computer Vision"];
+  const categories = ["All", "Machine Learning", "Deep Learning", "NLP"];
   
   const filteredProjects = filter === "All" 
     ? projects 
@@ -63,9 +66,9 @@ const ProjectsShowcase = () => {
   return (
     <section className="py-16 container mx-auto px-4">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
+        <h2 className="text-3xl font-bold mb-4">Featured ML Projects</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Explore some of my recent work in artificial intelligence and machine learning
+          Explore some of my machine learning and AI projects
         </p>
       </div>
       
@@ -93,7 +96,10 @@ const ProjectsShowcase = () => {
               />
             </div>
             <CardHeader>
-              <CardTitle>{project.title}</CardTitle>
+              <div className="flex items-center gap-2">
+                {project.icon}
+                <CardTitle>{project.title}</CardTitle>
+              </div>
               <CardDescription>{project.description}</CardDescription>
             </CardHeader>
             <CardContent>

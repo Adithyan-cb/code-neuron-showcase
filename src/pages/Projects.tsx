@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Github, ExternalLink, Search } from "lucide-react";
+import { Github, ExternalLink, Search, Brain, Database, ChartBar } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
 // Project type definition
@@ -19,6 +19,7 @@ type ProjectType = {
   githubUrl?: string;
   demoUrl?: string;
   category: string;
+  icon?: React.ReactNode;
 };
 
 // Expanded sample projects data
@@ -32,6 +33,7 @@ const projects: ProjectType[] = [
     githubUrl: "https://github.com/yourusername/neural-visualizer",
     demoUrl: "https://demo-url.com",
     category: "Deep Learning",
+    icon: <Brain className="h-6 w-6 text-ai-purple" />,
   },
   {
     id: 2,
@@ -41,6 +43,7 @@ const projects: ProjectType[] = [
     tags: ["Python", "Hugging Face", "NLP", "Streamlit"],
     githubUrl: "https://github.com/yourusername/text-summarizer",
     category: "NLP",
+    icon: <Database className="h-6 w-6 text-ai-purple" />,
   },
   {
     id: 3,
@@ -50,6 +53,7 @@ const projects: ProjectType[] = [
     tags: ["Python", "TensorFlow", "OpenCV", "Medical AI"],
     githubUrl: "https://github.com/yourusername/medical-vision",
     category: "Computer Vision",
+    icon: <ChartBar className="h-6 w-6 text-ai-purple" />,
   },
   {
     id: 4,
@@ -59,16 +63,18 @@ const projects: ProjectType[] = [
     tags: ["Python", "OpenAI Gym", "PyTorch", "RL"],
     githubUrl: "https://github.com/yourusername/rl-game-ai",
     category: "Reinforcement Learning",
+    icon: <Brain className="h-6 w-6 text-ai-purple" />,
   },
   {
     id: 5,
-    title: "AI-Powered Recommendation System",
-    description: "A content recommendation engine using collaborative filtering and deep learning to provide personalized suggestions.",
+    title: "Machine Learning Classification Toolkit",
+    description: "A toolkit that implements various classification algorithms and provides visualization tools for understanding model performance.",
     image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2000",
-    tags: ["Python", "TensorFlow", "Flask", "Recommendation Systems"],
-    githubUrl: "https://github.com/yourusername/ai-recommender",
+    tags: ["Python", "Scikit-learn", "Matplotlib", "Jupyter"],
+    githubUrl: "https://github.com/yourusername/ml-classification",
     demoUrl: "https://demo-url.com",
-    category: "Recommendation Systems",
+    category: "Machine Learning",
+    icon: <Database className="h-6 w-6 text-ai-purple" />,
   },
   {
     id: 6,
@@ -78,6 +84,7 @@ const projects: ProjectType[] = [
     tags: ["Python", "NLTK", "React", "D3.js", "NLP"],
     githubUrl: "https://github.com/yourusername/sentiment-dashboard",
     category: "NLP",
+    icon: <ChartBar className="h-6 w-6 text-ai-purple" />,
   },
 ];
 
@@ -85,7 +92,7 @@ const Projects = () => {
   const [filter, setFilter] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState("");
   
-  const categories = ["All", "Deep Learning", "NLP", "Computer Vision", "Reinforcement Learning", "Recommendation Systems"];
+  const categories = ["All", "Machine Learning", "Deep Learning", "NLP", "Computer Vision", "Reinforcement Learning"];
   
   const filteredProjects = projects.filter(project => {
     const matchesCategory = filter === "All" || project.category === filter;
@@ -102,9 +109,9 @@ const Projects = () => {
       <main className="flex-grow">
         <section className="py-16 container mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold mb-4">Projects</h1>
+            <h1 className="text-4xl font-bold mb-4">ML Projects</h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Explore my artificial intelligence and machine learning projects
+              Explore my machine learning and artificial intelligence projects
             </p>
           </div>
           
@@ -152,7 +159,10 @@ const Projects = () => {
                     />
                   </div>
                   <CardHeader>
-                    <CardTitle>{project.title}</CardTitle>
+                    <div className="flex items-center gap-2">
+                      {project.icon}
+                      <CardTitle>{project.title}</CardTitle>
+                    </div>
                     <CardDescription>{project.description}</CardDescription>
                   </CardHeader>
                   <CardContent>

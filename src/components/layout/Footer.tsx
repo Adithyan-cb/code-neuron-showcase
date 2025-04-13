@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <Link to="/" className="text-2xl font-bold text-ai-purple">
-              Adithyan<span className="text-ai-blue">.</span>
+              Adithyan CB<span className="text-ai-blue">.</span>
             </Link>
             <p className="mt-4 text-muted-foreground">
               Showcasing my journey and projects in artificial intelligence and machine learning.
@@ -75,7 +75,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Adithyan. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Adithyan CB. All rights reserved.</p>
         </div>
       </div>
     </footer>

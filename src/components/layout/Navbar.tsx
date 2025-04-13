@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold text-ai-purple">
-          Adithyan<span className="text-ai-blue">.</span>
+          Adithyan CB<span className="text-ai-blue">.</span>
         </Link>
         
         {/* Desktop Navigation */}

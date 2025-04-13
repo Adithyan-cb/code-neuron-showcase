@@ -1,9 +1,32 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Brain } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [text, setText] = useState("");
+  const [isTyping, setIsTyping] = useState(true);
+  const fullText = "hey, i'm Adithyan";
+  
+  useEffect(() => {
+    if (isTyping) {
+      if (text.length < fullText.length) {
+        const timeout = setTimeout(() => {
+          setText(fullText.slice(0, text.length + 1));
+        }, 100);
+        return () => clearTimeout(timeout);
+      } else {
+        setIsTyping(false);
+        const timeout = setTimeout(() => {
+          setIsTyping(true);
+          setText("");
+        }, 3000);
+        return () => clearTimeout(timeout);
+      }
+    }
+  }, [text, isTyping]);
+
   return (
     <div className="relative overflow-hidden py-24 sm:py-32">
       {/* Background decorative elements */}
@@ -20,15 +43,9 @@ const Hero = () => {
       
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center p-1 bg-muted rounded-full mb-8 animate-fade-in">
-            <div className="flex items-center space-x-2 px-4 py-1 bg-background rounded-full">
-              <Brain className="h-4 w-4 text-ai-purple" />
-              <span className="text-sm font-medium">AI Engineer & ML Enthusiast</span>
-            </div>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 animate-fade-in" style={{ animationDelay: "100ms" }}>
-            Building <span className="text-transparent bg-clip-text bg-gradient-to-r from-ai-purple to-ai-blue animate-pulse-slow">intelligent</span> solutions with AI
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 animate-fade-in flex items-center justify-center" style={{ animationDelay: "100ms" }}>
+            <span>{text}</span>
+            <span className="ml-1 w-1 h-10 bg-ai-purple inline-block animate-pulse"></span>
           </h1>
           
           <p className="text-xl text-muted-foreground mb-10 animate-fade-in" style={{ animationDelay: "200ms" }}>

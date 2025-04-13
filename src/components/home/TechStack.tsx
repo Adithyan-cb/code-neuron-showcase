@@ -11,26 +11,24 @@ type Tech = {
 // Sample tech stack data
 const techStack: Tech[] = [
   // AI/ML frameworks
-  { name: "PyTorch", icon: "🔥", category: "AI/ML" },
-  { name: "TensorFlow", icon: "📊", category: "AI/ML" },
-  { name: "Scikit-learn", icon: "🧮", category: "AI/ML" },
-  { name: "Hugging Face", icon: "🤗", category: "AI/ML" },
-  { name: "LangChain", icon: "⛓️", category: "AI/ML" },
+  { name: "PyTorch", icon: "🔥", category: "AI/ML Frameworks" },
+  { name: "TensorFlow", icon: "📊", category: "AI/ML Frameworks" },
+  { name: "Scikit-learn", icon: "🧮", category: "AI/ML Frameworks" },
+  { name: "LangChain", icon: "⛓️", category: "AI/ML Frameworks" },
   
   // Programming languages
   { name: "Python", icon: "🐍", category: "Languages" },
-  { name: "JavaScript", icon: "📜", category: "Languages" },
-  { name: "SQL", icon: "📁", category: "Languages" },
+  {name: "C++",icon:"👾", category: "Languages"},
   
   // Web technologies
-  { name: "React", icon: "⚛️", category: "Web" },
-  { name: "Flask", icon: "🧪", category: "Web" },
   { name: "FastAPI", icon: "⚡", category: "Web" },
+  { name: "HTML & CSS ", icon:"📑", category: "Web" },
   
   // Tools
-  { name: "Git", icon: "🔄", category: "Tools" },
-  { name: "Docker", icon: "🐳", category: "Tools" },
-  { name: "Jupyter", icon: "📓", category: "Tools" },
+  { name: "Git", icon: "🔄", category: "Tools & Libraries" },
+  { name: "Google Colab", icon: "📁", category: "Tools & Libraries" },
+  { name: "Jupyter", icon: "📓", category: "Tools & Libraries" },
+  { name: "Streamlit" , icon: "🛠", category: "Tools & Libraries"}
 ];
 
 const TechStack = () => {

@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Github, ExternalLink, Brain, Database, ChartBar } from "lucide-react";
+import { ArrowRight, Github, ExternalLink, Brain, Database, ChartBar,Code,FileText,Bot,BookOpenText} from "lucide-react";
 
 // Project type definition
 type ProjectType = {
@@ -25,12 +25,12 @@ const projects: ProjectType[] = [
     id: 1,
     title: "Alice",
     description: "Alice 👾– A chill, relatable chatbot with a playful vibe. Built with Streamlit (frontend) and Meta Llama 3 (through Groq) for fast, engaging conversations. Alice’s witty, supportive personality makes every chat feel like hanging out with your bestie. 😎",
-    image: "https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=2000",
+    image: "https://i.pinimg.com/736x/89/f0/c4/89f0c4c973d860e562a7d57ff255ef84.jpg",
     tags: ["Python", "Streamlit","Groq","Langchain"],
     githubUrl: "https://github.com/Adithyan-cb/Alice",
     demoUrl: "https://chat-with-alice.streamlit.app/",
-    category: "Deep Learning",
-    icon: <Brain className="h-6 w-6 text-ai-purple" />,
+    category: "Streamlit & Groq",
+    icon: <Bot className="h-6 w-6 text-ai-purple" />,
   },
   {
     id: 2,
@@ -40,25 +40,36 @@ const projects: ProjectType[] = [
     tags: ["Python", "Groq", "Streamlit"],
     githubUrl: "https://github.com/Adithyan-cb/summizeAI",
     demoUrl:"https://summize.streamlit.app/",
-    category: "NLP",
-    icon: <Database className="h-6 w-6 text-ai-purple" />,
+    category: "Streamlit & Groq",
+    icon: <FileText className="h-6 w-6 text-ai-purple" />,
   },
   {
     id: 3,
     title: "Code Critic",
-    description: "A toolkit that implements various classification algorithms and provides visualization tools for understanding model performance.",
-    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2000",
-    tags: ["Python", "Scikit-learn", "Matplotlib", "Jupyter"],
-    githubUrl: "https://github.com/yourusername/ml-classification",
-    category: "Machine Learning",
-    icon: <ChartBar className="h-6 w-6 text-ai-purple" />,
+    description: "Code Critic is an innovative web application that assists developers in refining and optimizing their source code. Built with Python, Streamlit, and integrated with Groq powered by the Llama3 model, Code Critic provides a seamless experience where you can simply upload your code, and our tool reviews it to suggest improvements and highlight potential bug fixes.",
+    image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags: ["Python","Streamlit","Groq"],
+    githubUrl: "https://github.com/Adithyan-cb/codeCritic",
+    demoUrl: "https://code-critic-ai.streamlit.app/",
+    category: "Streamlit & Groq",
+    icon: <Code className="h-6 w-6 text-ai-purple" />,
+  },
+  {
+    id: 4,
+    title: "Neural Nectar",
+    description: "NeuralNectar is a curated collection of AI, ML, and DL resources, designed to fuel your learning journey from beginner to expert with essential concepts, projects, and hands-on examples.",
+    image: "https://images.unsplash.com/photo-1550399105-c4db5fb85c18?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags: ["Markdown"],
+    githubUrl: "https://github.com/Adithyan-cb/NeuralNectar",
+    category: "Learning Resources",
+    icon: <BookOpenText className="h-6 w-6 text-ai-purple" />,
   },
 ];
 
 const ProjectsShowcase = () => {
   const [filter, setFilter] = useState<string>("All");
   
-  const categories = ["All", "Machine Learning", "Deep Learning", "NLP"];
+  const categories = ["Streamlit & Groq","Learning Resources"];
   
   const filteredProjects = filter === "All" 
     ? projects 
@@ -67,7 +78,7 @@ const ProjectsShowcase = () => {
   return (
     <section className="py-16 container mx-auto px-4">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold mb-4">Featured ML Projects</h2>
+        <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
         <p className="text-muted-foreground max-w-2xl mx-auto">
           Explore some of my machine learning and AI projects
         </p>
@@ -130,9 +141,7 @@ const ProjectsShowcase = () => {
                 )}
               </div>
               <Link to={`/projects/${project.id}`}>
-                <Button variant="ghost" className="text-ai-purple hover:text-ai-purple/90">
-                  View Details <ArrowRight className="ml-1 h-4 w-4" />
-                </Button>
+                
               </Link>
             </CardFooter>
           </Card>

@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Github, Linkedin } from "lucide-react";
+import { ThemeToggle } from "@/components/theme/ThemeToggle";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-bold text-ai-purple">
-          AIPortfolio<span className="text-ai-blue">.</span>
+          Adithyan<span className="text-ai-blue">.</span>
         </Link>
         
         {/* Desktop Navigation */}
@@ -33,6 +34,7 @@ const Navbar = () => {
             About
           </Link>
           <div className="flex items-center space-x-2">
+            <ThemeToggle />
             <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon" className="rounded-full">
                 <Github className="h-5 w-5" />
@@ -90,6 +92,7 @@ const Navbar = () => {
               About
             </Link>
             <div className="flex items-center space-x-2 pt-2">
+              <ThemeToggle />
               <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon" className="rounded-full">
                   <Github className="h-5 w-5" />

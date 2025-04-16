@@ -17,35 +17,7 @@ type BlogPost = {
 };
 
 // Sample blog posts data
-const blogPosts: BlogPost[] = [
-  {
-    id: 1,
-    title: "Getting Started with PyTorch for Deep Learning",
-    excerpt: "A beginner's guide to setting up and creating your first neural network using PyTorch, with practical examples and code snippets.",
-    date: "April 5, 2023",
-    category: "Deep Learning",
-    readTime: "8 min read",
-    slug: "getting-started-with-pytorch",
-  },
-  {
-    id: 2,
-    title: "Understanding Transformer Architectures in NLP",
-    excerpt: "An in-depth look at how transformer models work and why they've revolutionized natural language processing tasks.",
-    date: "March 12, 2023",
-    category: "NLP",
-    readTime: "12 min read",
-    slug: "understanding-transformers",
-  },
-  {
-    id: 3,
-    title: "Ethics in AI: Addressing Bias in Machine Learning Models",
-    excerpt: "Exploring the ethical considerations of AI development and strategies for identifying and mitigating bias in your models.",
-    date: "February 28, 2023",
-    category: "AI Ethics",
-    readTime: "10 min read",
-    slug: "ethics-in-ai",
-  },
-];
+const blogPosts: BlogPost[] = [];
 
 const BlogPreview = () => {
   return (
@@ -90,11 +62,9 @@ const BlogPreview = () => {
         </div>
         
         <div className="text-center mt-12">
-          <Link to="/blog">
-            <Button size="lg" variant="outline">
-              View All Posts <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </Link>
+        <p className="text-muted-foreground max-w-2xl mx-auto">
+            No posts yet...
+          </p>
         </div>
       </div>
     </section>

@@ -31,17 +31,17 @@ const About = () => {
                   </p>
                   
                   <div className="flex justify-center lg:justify-start space-x-3 mb-6">
-                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/adithyan-cb" target="_blank" rel="noopener noreferrer">
                       <Button variant="outline" size="icon" className="rounded-full">
                         <Github className="h-5 w-5" />
                       </Button>
                     </a>
-                    <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+                    <a href="https://linkedin.com/in/adithyan-cb" target="_blank" rel="noopener noreferrer">
                       <Button variant="outline" size="icon" className="rounded-full">
                         <Linkedin className="h-5 w-5" />
                       </Button>
                     </a>
-                    <a href="mailto:your.email@example.com">
+                    <a href="mailto:adhicodes34@gmail.com">
                       <Button variant="outline" size="icon" className="rounded-full">
                         <Mail className="h-5 w-5" />
                       </Button>
@@ -63,13 +63,7 @@ const About = () => {
                     <h2 className="text-2xl font-bold mb-4">About Me</h2>
                     <div className="space-y-4 text-muted-foreground">
                       <p>
-                        I'm a college student passionate about machine learning and artificial intelligence. My journey into AI began during my undergraduate studies, where I became fascinated by the potential of algorithms to learn patterns and make decisions.
-                      </p>
-                      <p>
-                        Currently, I'm self-studying various ML and AI concepts, focusing on natural language processing and computer vision applications. I enjoy implementing research papers and building projects that apply these techniques to solve interesting problems.
-                      </p>
-                      <p>
-                        When I'm not coding or training models, you can find me contributing to open-source projects, participating in ML competitions, or helping fellow students understand complex concepts. I'm always looking to connect with others who share my enthusiasm for AI and ML.
+                      Hello there! 👋 I'm Adithyan C B, a passionate tech enthusiast in my 2nd year of BCA. I'm diving deep into the world of technology and love exploring emerging trends in Artificial Intelligence 🤖, deep learning 📚, and large language models 🧠. I enjoy experimenting with different programming tools and frameworks, always eager to learn, grow, and build innovative solutions. Join me as I embark on this exciting journey of discovery and development!.
                       </p>
                     </div>
                   </div>
@@ -122,10 +116,10 @@ const About = () => {
                           <GraduationCap className="h-6 w-6 mr-4 text-ai-purple flex-shrink-0 mt-1" />
                           <div>
                             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2">
-                              <h3 className="text-xl font-semibold">B.S. in Computer Science</h3>
-                              <span className="text-muted-foreground">2021 - Present</span>
+                              <h3 className="text-xl font-semibold">Bachelor in Computer Application ( BCA )</h3>
+                              <span className="text-muted-foreground">2024 - Present</span>
                             </div>
-                            <p className="text-muted-foreground mb-2">State University</p>
+                            <p className="text-muted-foreground mb-2">Tharanannellur Arts & Science college</p>
                             <div className="space-y-2">
                               <p>Focusing on machine learning and computational mathematics.</p>
                               <p>Relevant coursework: Data Structures, Algorithms, Machine Learning Fundamentals, Linear Algebra, Statistics</p>

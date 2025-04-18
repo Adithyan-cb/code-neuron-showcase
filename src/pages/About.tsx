@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -19,7 +18,7 @@ const About = () => {
                 <div className="text-center lg:text-left">
                   <div className="mb-6 mx-auto lg:mx-0 w-48 h-48 overflow-hidden rounded-full border-4 border-ai-purple">
                     <img 
-                      src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=500&fit=crop"
+                      src="src/components/images/profile-pic.jpeg"
                       alt="Profile"
                       className="w-full h-full object-cover"
                     />
@@ -120,14 +119,11 @@ const About = () => {
                               <span className="text-muted-foreground">2024 - Present</span>
                             </div>
                             <p className="text-muted-foreground mb-2">Tharanannellur Arts & Science college</p>
-                            <div className="space-y-2">
-                              <p>Focusing on machine learning and computational mathematics.</p>
-                              <p>Relevant coursework: Data Structures, Algorithms, Machine Learning Fundamentals, Linear Algebra, Statistics</p>
-                              <div className="flex flex-wrap gap-2 mt-3">
-                                <Badge variant="outline">Machine Learning</Badge>
-                                <Badge variant="outline">Algorithms</Badge>
-                                <Badge variant="outline">Data Science</Badge>
-                              </div>
+                            <div className="space-y-3">
+                              <p>Focusing on computer applications and software development, equipping students with foundational and specialized skills in various areas of information technology.</p>
+                              <p>Relevant coursework: Programming Language,Data structures & Algorithms,DBMS,Web development,Operating Systems,Computer network,Software engineering,
+                                Web technologies,Computer Architecture,Mathematics & Statistics,Specialized/Elective courses.
+                              </p>
                             </div>
                           </div>
                         </div>
@@ -144,16 +140,16 @@ const About = () => {
                             </div>
                             <div className="space-y-3">
                               <div>
-                                <p className="font-medium">Deep Learning Specialization - Coursera</p>
-                                <p className="text-muted-foreground">2023</p>
-                              </div>
-                              <div>
-                                <p className="font-medium">Machine Learning - Stanford Online</p>
-                                <p className="text-muted-foreground">2022</p>
-                              </div>
-                              <div>
-                                <p className="font-medium">PyTorch for Deep Learning - Fast.ai</p>
-                                <p className="text-muted-foreground">2023</p>
+                                <p className="font-medium">Pandas - Kaggle</p>
+                                <p className="text-muted-foreground">2025</p>
+                                <Button
+                                  variant="outline"
+                                  size="sm"
+                                  onClick={() => window.open("https://drive.google.com/file/d/1ge-qkwhm7QAp_BHJZQrmD9cmD962Blqf/view?usp=drive_link", "_blank")}
+                                  className="mt-2"
+                                >
+                                  View Certificate
+                                </Button>
                               </div>
                             </div>
                           </div>

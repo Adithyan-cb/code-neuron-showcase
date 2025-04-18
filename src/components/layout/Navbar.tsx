@@ -93,12 +93,12 @@ const Navbar = () => {
             </Link>
             <div className="flex items-center space-x-2 pt-2">
               <ThemeToggle />
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/adithyan-cb" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon" className="rounded-full">
                   <Github className="h-5 w-5" />
                 </Button>
               </a>
-              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/in/adithyan-cb" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon" className="rounded-full">
                   <Linkedin className="h-5 w-5" />
                 </Button>

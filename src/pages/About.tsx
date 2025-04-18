@@ -18,7 +18,7 @@ const About = () => {
                 <div className="text-center lg:text-left">
                   <div className="mb-6 mx-auto lg:mx-0 w-48 h-48 overflow-hidden rounded-full border-4 border-ai-purple">
                     <img 
-                      src="src/components/images/profile-pic.jpeg"
+                      src="/images/profile-pic.jpeg"
                       alt="Profile"
                       className="w-full h-full object-cover"
                     />

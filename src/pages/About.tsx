@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Github, Linkedin, GraduationCap, FileText } from "lucide-react";
+import { Mail, Github, Twitter, GraduationCap, FileText } from "lucide-react";
 
 const About = () => {
   return (
@@ -37,7 +37,7 @@ const About = () => {
                     </a>
                     <a href="https://linkedin.com/in/adithyan-cb" target="_blank" rel="noopener noreferrer">
                       <Button variant="outline" size="icon" className="rounded-full">
-                        <Linkedin className="h-5 w-5" />
+                        <Twitter className="h-5 w-5" />
                       </Button>
                     </a>
                     <a href="mailto:adhicodes34@gmail.com">

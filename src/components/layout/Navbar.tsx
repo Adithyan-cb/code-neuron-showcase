@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Github, Linkedin } from "lucide-react";
+import { Menu, X, Github, Linkedin,Twitter } from "lucide-react";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 
 const Navbar = () => {
@@ -40,9 +40,9 @@ const Navbar = () => {
                 <Github className="h-5 w-5" />
               </Button>
             </a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/AdhiCanCode" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon" className="rounded-full">
-                <Linkedin className="h-5 w-5" />
+                <Twitter className="h-5 w-5" />
               </Button>
             </a>
           </div>

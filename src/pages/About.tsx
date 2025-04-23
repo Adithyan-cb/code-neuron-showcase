@@ -100,6 +100,7 @@ const About = () => {
                         <div className="flex flex-wrap gap-2">
                           <Badge>Git</Badge>
                           <Badge>Google Colab</Badge>
+                          <Badge>Streamlit</Badge>
                         </div>
                       </div>
                     </div>
